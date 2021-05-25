@@ -1,0 +1,8 @@
+type Share @entity {
+  id: ID!
+  sender: Bytes! # address
+  receiver: Bytes! # address
+  appId: String!
+  shareType: String
+  shareData: String
+}
