@@ -29,3 +29,6 @@ Make sure you are authorized:
 graph codegen 
 graph deploy --node https://api.thegraph.com/deploy/ --ipfs https://api.thegraph.com/ipfs/ michielpost/the-shareit-network
 ```
+
+## Acknowledgements
+Development has been made possible with a grant from [The Graph](https://thegraph.com/blog/wave-one-funding).
