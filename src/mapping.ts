@@ -1,17 +1,16 @@
 import { BigInt } from "@graphprotocol/graph-ts"
 import {
   TheShareItNetwork,
-  ShareCall
+  ShareIt
 } from "../generated/TheShareItNetwork/TheShareItNetwork"
 import { Share } from "../generated/schema"
 
-export function handleShareIt(call: ShareCall): void {
-  let id = call.transaction.hash.toHex()
-  let share = new Share(id)
-  share.sender = call.from
-  share.receiver = call.inputs.receiver
-  share.appId = call.inputs.appId
-  share.shareType = call.inputs.shareType
-  share.shareData = call.inputs.data
+export function handleShareIt(event: ShareIt): void {
+  let share = new Share(event.transaction.hash.toHex())
+  share.sender = event.params.sender
+  share.receiver = event.params.receiver
+  share.appId = event.params.appId
+  share.shareType = event.params.shareType
+  share.shareData = event.params.data
   share.save()
 }

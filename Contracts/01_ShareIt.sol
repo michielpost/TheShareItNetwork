@@ -5,21 +5,21 @@ pragma solidity ^0.7.6;
  * Smart Contract that allows sharing of an uri with another address
  */
 contract TheShareItNetwork {
-    //variables
-    //storing actionFee amount needed for the event
     address public owner;
+    
+    event ShareIt(address sender, address receiver, string appId, string shareType, string data);
 
     constructor() public {
         owner = msg.sender;
     }
 
     /**
-     * Share data to index
+     * Share data, emit event
      */
     function share(address receiver, string memory appId, string memory shareType, string memory data) public {
         require(bytes(appId).length > 0);
-
-        //Call does nothing, but all input data will be index by The Graph
+      
+        emit ShareIt(msg.sender, receiver, appId, shareType, data);
     }
  
 }

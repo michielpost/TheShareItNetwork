@@ -6,9 +6,9 @@ dataSources:
     name: TheShareItNetwork
     network: kovan
     source:
-      address: "0x56b63bdD10AcD7f703a2E8eF519CdA8c5d66d56d"
+      address: "0x6E8c5AFd3CFf5f6Ec85c032B68eF2997323a00FD"
       abi: TheShareItNetwork
-      startBlock: 25096534
+      startBlock: 25176330
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.4
@@ -18,7 +18,7 @@ dataSources:
       abis:
         - name: TheShareItNetwork
           file: ./abis/TheShareItNetwork.json
-      callHandlers:
-        - function: share(address,string,string,string)
+      eventHandlers:
+        - event: ShareIt(address,address,string,string,string)
           handler: handleShareIt
       file: ./src/mapping.ts

@@ -1,7 +1,7 @@
 # The ShareIt Network
 Smart Contract and subgraph for The ShareIt Network
 
-Deployed to Kovan Testnet: `0x56b63bdD10AcD7f703a2E8eF519CdA8c5d66d56d` block `25096534`
+Deployed to Kovan Testnet: `0x6E8c5AFd3CFf5f6Ec85c032B68eF2997323a00FD` block `25176330`
 
 Available as subgraph on The Graph: https://thegraph.com/explorer/subgraph/michielpost/the-shareit-network
 
