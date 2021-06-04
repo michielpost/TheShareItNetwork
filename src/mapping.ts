@@ -12,5 +12,6 @@ export function handleShareIt(event: ShareIt): void {
   share.appId = event.params.appId
   share.shareType = event.params.shareType
   share.shareData = event.params.data
+  share.blockNumber = event.block.number
   share.save()
 }

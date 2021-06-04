@@ -5,4 +5,5 @@ type Share @entity {
   appId: String!
   shareType: String
   shareData: String
+  blockNumber: BigInt
 }
